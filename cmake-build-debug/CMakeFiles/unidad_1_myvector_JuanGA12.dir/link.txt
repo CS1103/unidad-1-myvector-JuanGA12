@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/unidad_1_myvector_JuanGA12.dir/main.cpp.o CMakeFiles/unidad_1_myvector_JuanGA12.dir/MyVector.cpp.o  -o unidad_1_myvector_JuanGA12 
