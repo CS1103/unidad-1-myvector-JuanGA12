@@ -18,6 +18,7 @@ int main() {
     assert(v1.size() == 3);
 
     MyVector v2;
+
     v2.push_back(20);
     v2.push_back(40);
     v2.push_back(60);
@@ -36,7 +37,9 @@ int main() {
     cout << endl;
 
 
-    MyVector v3 = v1 + v2;
+    MyVector v3;
+
+    v3 = v1 + v2;
     assert(v3.size() == 3);
 
     cout <<"SUMA V1 + V2: "<<endl ;
@@ -46,7 +49,7 @@ int main() {
 
     cout <<endl;
     cout <<endl;
-    cout << "pop_back de V1: "<<endl;
+    cout << "pop_back de V1 "<<endl;
     v1.pop_back();
     for (int j = 0; j < v1.size(); ++j) {
         cout << v1[j]<<" ";
@@ -67,6 +70,9 @@ int main() {
     for (int j = 0; j < v1.size(); ++j) {
         cout << v1[j]<<" ";
     }
+
+    cout <<endl;
+    cout <<endl;
 
 
 }

@@ -7,18 +7,18 @@
 #include <iostream>
 
 UTEC::MyVector::MyVector(): vector{nullptr}, n_elementos{0} {
-
 }
 
 UTEC::MyVector::MyVector(int n): n_elementos{n} {
 
     vector = new int[n_elementos];
+    delete[] vector;
+
 
 }
 
 UTEC::MyVector::~MyVector() {
-
-
+   std::cout<<"Eliminando Objeto "<<vector<<std::endl;
 }
 
 int UTEC::MyVector::size() {
