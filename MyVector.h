@@ -16,6 +16,9 @@ namespace UTEC{
     public:
         MyVector();
         MyVector(int);
+		// ERROR: Falto definir
+		MyVector(const MyVector& vec);
+
         virtual ~MyVector();
 
         int size();
@@ -25,7 +28,10 @@ namespace UTEC{
         void erase(int);
         int operator[](int);
         MyVector operator+(const MyVector&);
-        MyVector &operator=(const MyVector&);
+
+		// ERROR: Declaracion incorrecta
+		// MyVector& operator=(const UTEC::MyVector& V) 
+        MyVector operator=(const MyVector&);
 
 
 

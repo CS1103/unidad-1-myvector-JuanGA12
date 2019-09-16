@@ -1,0 +1,3 @@
+C:/tmp/Unidad 1 MyVector-09-14-2019-02-31-59/JuanGA12/out/build/x64-Debug/CMakeFiles/unidad_1_myvector_JuanGA12.dir
+C:/tmp/Unidad 1 MyVector-09-14-2019-02-31-59/JuanGA12/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/tmp/Unidad 1 MyVector-09-14-2019-02-31-59/JuanGA12/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

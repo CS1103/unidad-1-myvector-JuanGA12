@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "unidad_1_myvector_JuanGA12",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "unidad_1_myvector_JuanGA12::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unidad_1_myvector_JuanGA12-Debug-eccd26e3e2a13a2c6366.json",
+					"name" : "unidad_1_myvector_JuanGA12",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/tmp/Unidad 1 MyVector-09-14-2019-02-31-59/JuanGA12/out/build/x64-Debug",
+		"source" : "C:/tmp/Unidad 1 MyVector-09-14-2019-02-31-59/JuanGA12"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

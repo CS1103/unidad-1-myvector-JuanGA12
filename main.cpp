@@ -42,6 +42,7 @@ int main() {
     v3 = v1 + v2;
     assert(v3.size() == 3);
 
+	// ERROR: El operador + debio concatenar 2 vectores que podrian incluso tener tamaños diferentes
     cout <<"SUMA V1 + V2: "<<endl ;
     for (int j = 0; j < v3.size(); ++j) {
         cout << v3[j]<<" ";

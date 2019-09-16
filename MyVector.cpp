@@ -17,8 +17,19 @@ UTEC::MyVector::MyVector(int n): n_elementos{n} {
 
 }
 
+UTEC::MyVector::MyVector(const MyVector& vec) : n_elementos{ vec.n_elementos }
+{
+	vector = new int[n_elementos];
+	for (int i = 0; i < n_elementos; i++) {
+		vector[i] = vec.vector[i];
+	}
+}
+
 UTEC::MyVector::~MyVector() {
-   std::cout<<"Eliminando Objeto "<<vector<<std::endl;
+	// ERROR: Falto esta linea
+	delete[] vector;
+
+   //std::cout<<"Eliminando Objeto "<<vector<<std::endl;
 }
 
 int UTEC::MyVector::size() {
@@ -50,24 +61,25 @@ void UTEC::MyVector::push_back(int valor) {
 }
 
 void UTEC::MyVector::insert(int valor, int posicion) {
-    try{
+    //try{
         if ( posicion > n_elementos || posicion < 0){
             throw std::runtime_error("Fuera de límite");
         }
-    }
-    catch (std::exception& e){
-        std::cout << e.what()<<std::endl;
-    }
+    //}
+    //catch (std::exception& e){
+    //    std::cout << e.what()<<std::endl;
+    //}
 
     int *tmp = new int[n_elementos + 1];
 
+	// ERROR: ¿Por qué este for?
     for (int i = 0; i < n_elementos ; ++i) {
         tmp[i] = vector[i];
-
     }
 
     n_elementos++;
 
+	// Este codigo podria ser la simple si se particionara el bucle en 2 bucles, previo y posterior
     for (int j = 0; j < n_elementos ; ++j) {
         if( j < posicion){
             tmp[j] = vector[j] ;
@@ -92,8 +104,9 @@ void UTEC::MyVector::pop_back() {
     int *tmp = new int[n_elementos - 1];
 
     // 2. Transferir los datos a tmp
-    for (int i = 0; i < n_elementos; ++i) {
-        tmp[i] = vector[i];
+	//for (int i = 0; i < n_elementos; ++i) {
+	for (int i = 0; i < n_elementos - 1; ++i) {
+		tmp[i] = vector[i];
     }
 
     // 3. Borrar memoria anterior
@@ -106,16 +119,16 @@ void UTEC::MyVector::pop_back() {
     n_elementos--;
 }
 
-void UTEC::MyVector::erase(int posicion) {
+void UTEC::MyVector::erase(int posicion) { 
 
-    try {
+    //try {
         if( posicion > n_elementos){
             throw std::runtime_error("Fuera de límite");
         }
-    }
-    catch (std::exception& e){
-    std::cout << e.what();
-    }
+    //}
+    //catch (std::exception& e){
+    //std::cout << e.what();
+    //}
 
     int *tmp = new int [n_elementos -1];
 
@@ -161,15 +174,17 @@ UTEC::MyVector UTEC::MyVector::operator+(const UTEC::MyVector &V) {
 
 }
 
-UTEC::MyVector &UTEC::MyVector::operator=(const UTEC::MyVector &V) {
+// ERROR: Declaracion incorrecta
+// UTEC::MyVector& UTEC::MyVector::operator=(const UTEC::MyVector& V) {
+UTEC::MyVector UTEC::MyVector::operator=(const UTEC::MyVector& V) {
 
-    if( this-> n_elementos != 0){
-        delete[] this->vector;
+    if( n_elementos != 0){
+        delete[] vector;
     }
-    this->n_elementos = V.n_elementos;
-    this->vector = new int[this->n_elementos];
-    for(int i = 0; i < this->n_elementos; i++){
-        this->vector[i] = V.vector[i];
+    n_elementos = V.n_elementos;
+    vector = new int[n_elementos];
+    for(int i = 0; i < n_elementos; i++){
+        vector[i] = V.vector[i];
     }
     return *this;
 
